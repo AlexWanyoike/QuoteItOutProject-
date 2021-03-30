@@ -1,10 +1,11 @@
-<div>
-    <h1>My Goals</h1>
-    <hr>
-    <ul>
-      <li *ngFor='let goal of goals'>
-        {{goal.name}}
-        <app-goal-detail [goal]='goal'></app-goal-detail>
-      </li>
-    </ul>
-  </div>
+<h1>My Goals</h1>
+<ul>
+    <div *ngFor='let goal of goals;let i = index'>
+        <li appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</li>
+        <button  (click)='toggleDetails(i)'>Toggle Details</button>
+
+        
+    
+    </div>
+</ul>
+<p *ngIf='goals.length > 5'>You have too many goals</p>
