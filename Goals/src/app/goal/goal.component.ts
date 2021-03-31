@@ -4,12 +4,13 @@ import { GoalService } from '../goal-service/goal.service';
 import { AlertService } from '../alert-service/alert.service';
 import { Quote } from '../quote-class/quote';
 import { HttpClient } from '@angular/common/http';
+import { QuoteRequestService } from '../quote-http/quote-request.service';
 
 @Component({
   selector: 'app-goal',
   templateUrl: './goal.component.html',
   styleUrls: ['./goal.component.css'],
-  providers: [GoalService, AlertService, Quote, HttpClient]
+  providers: [GoalService, AlertService, Quote, HttpClient, QuoteRequestService]
 })
 
 export class GoalComponent implements OnInit { 

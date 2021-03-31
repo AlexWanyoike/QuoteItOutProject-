@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -26,7 +27,8 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
     GoalFormComponent,
     HttpClientModule,
     NgProgressModule,
-    NgProgressHttpClientModule
+    NgProgressHttpClientModule,
+    AboutComponent
     
   ],
   imports: [
