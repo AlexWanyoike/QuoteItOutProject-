@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class DataserviceService {
+export class DataService {
 
 
 gifs=new BehaviorSubject<any>([]);
@@ -16,7 +16,7 @@ gifs=new BehaviorSubject<any>([]);
 
 constructor(private http:HttpClient) { }
 
-getTrendingGIFs(){
+getTrendingGifs(){
   return this.http.get(`https://api.giphy.com/v1/gifs/trending?api_key=%{environment.giphyApiKey}&limit=50`).subscribe((response:any)=>{
     this.gifs.next(response.data);
   });
