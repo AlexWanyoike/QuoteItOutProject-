@@ -2,7 +2,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Quotedata } from './../quotedata';
-import { DetailsQuoteComponent } from './../details-quote/details-quote.component';
+
 
 
 @Component({
