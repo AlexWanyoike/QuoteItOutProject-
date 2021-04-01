@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit, Input} from '@angular/core';
+import { Quotedata } from './../quotedata';
+
 
 @Component({
   selector: 'app-details-quote',
@@ -7,7 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsQuoteComponent implements OnInit {
 
-  constructor() { }
+
+  @Input() quote: Quotedata | undefined
+  
+  
+
+ 
 
   ngOnInit(): void {
   }
