@@ -7,6 +7,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteformComponent } from './quoteform/quoteform.component';
 import { QuotedetailsComponent } from './quotedetails/quotedetails.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { StrikethroughDirective } from './strikethrough.directive';
 
 
 
@@ -17,6 +18,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     QuoteformComponent,
     QuotedetailsComponent,
     NavbarComponent,
+    StrikethroughDirective,
     
   ],
   imports: [

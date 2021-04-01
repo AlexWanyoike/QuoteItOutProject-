@@ -1,7 +1,10 @@
 
+import { QuoteformComponent } from './../quoteform/quoteform.component';
+
 
 import { Component, OnInit , Input, Output, EventEmitter} from '@angular/core';
 import { Quoteclass } from './../quoteclass';
+
 
 
 
