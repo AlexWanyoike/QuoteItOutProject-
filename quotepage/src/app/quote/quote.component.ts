@@ -1,8 +1,8 @@
 import { QuotedetailsComponent } from './../quotedetails/quotedetails.component';
 
-
 import { Quoteclass } from './../quoteclass';
 import { Component, OnInit } from '@angular/core';
+
 
 
 
@@ -17,19 +17,20 @@ import { Component, OnInit } from '@angular/core';
 export class QuoteComponent implements OnInit {
 
   
-  quote: Quoteclass| undefined;
+  
   
 
   quotes: Quoteclass[] = [
-    new Quoteclass('a', 'Watch finding Nemo', 'Find an online version and watch merlin find his son'),
-    new Quoteclass('b','Buy Cookies','I have to buy cookies for the parrot'),
-    new Quoteclass('cs','Get new Phone Case','Diana has her birthday coming up soon'),
+    new Quoteclass('a', 'Watch finding Nemo', 'Find an online version and watch merlin find his son',new Date(2020,3,14)),
+    new Quoteclass('b','Buy Cookies','I have to buy cookies for the parrot',new Date(2020,3,14)),
+    new Quoteclass('cs','Get new Phone Case','Diana has her birthday coming up soon',new Date(2020,3,14)),
     
   ];
   
   toggleDetails(index: any){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }  
+  
   
   ngOnInit(): void {
   }

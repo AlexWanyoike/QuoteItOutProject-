@@ -7,7 +7,8 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteformComponent } from './quoteform/quoteform.component';
 import { QuotedetailsComponent } from './quotedetails/quotedetails.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { QuoteinfoComponent } from './quoteinfo/quoteinfo.component';
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { QuoteinfoComponent } from './quoteinfo/quoteinfo.component';
     QuoteformComponent,
     QuotedetailsComponent,
     NavbarComponent,
-    QuoteinfoComponent
+    
   ],
   imports: [
     BrowserModule,

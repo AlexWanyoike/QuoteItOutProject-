@@ -1,6 +1,6 @@
-import { QuoteComponent } from './../quote/quote.component';
 
-import { Component, OnInit , Input, Output , EventEmitter} from '@angular/core';
+
+import { Component, OnInit , Input, Output, EventEmitter} from '@angular/core';
 import { Quoteclass } from './../quoteclass';
 
 
@@ -15,8 +15,13 @@ export class QuotedetailsComponent implements OnInit {
 
 
   @Input() quote: Quoteclass| undefined;
+  @Output() isComplete = new EventEmitter<boolean>();
+
   
   
+  quoteComplete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
   
   
   
