@@ -1,7 +1,10 @@
+import { DatecalcPipe } from './../datecalc.pipe';
+
 import { QuotedetailsComponent } from './../quotedetails/quotedetails.component';
 
 import { Quoteclass } from './../quoteclass';
 import { Component, OnInit } from '@angular/core';
+
 
 
 

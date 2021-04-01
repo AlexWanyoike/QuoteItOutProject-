@@ -1,3 +1,4 @@
+import { DatecalcPipe } from './datecalc.pipe';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,7 +9,7 @@ import { QuoteformComponent } from './quoteform/quoteform.component';
 import { QuotedetailsComponent } from './quotedetails/quotedetails.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { StrikethroughDirective } from './strikethrough.directive';
-import { DatecalcPipe } from './datecalc.pipe';
+
 
 
 

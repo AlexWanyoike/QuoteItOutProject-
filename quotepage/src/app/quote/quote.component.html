@@ -3,7 +3,7 @@
     <hr>
     <ul>
         <div *ngFor='let quote of quotes;let i = index'>
-            <li appStrikethrough>{{quote.name}} due on {{quote.subdate}}</li> 
+            <li appStrikethrough>{{quote.name}} due on {{quote.subdate|dateCount}}</li> 
             <li >{{quote.quotename}}</li>
             <li> {{quote.quoteauthor}}</li>
             <button (click)='toggleDetails(i)'>Show More</button>
