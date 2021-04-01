@@ -10,7 +10,7 @@ import { QuoteRequestService } from '../quote-http/quote-request.service';
   selector: 'app-goal',
   templateUrl: './goal.component.html',
   styleUrls: ['./goal.component.css'],
-  providers: [GoalService, AlertService, Quote, HttpClient, QuoteRequestService]
+  providers: [GoalService, AlertService, Quote, HttpClient, QuoteRequestService],
 })
 
 export class GoalComponent implements OnInit { 
