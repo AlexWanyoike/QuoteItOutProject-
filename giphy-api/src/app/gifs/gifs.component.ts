@@ -1,4 +1,6 @@
+import { DataserviceService } from './../dataservice.service';
 import { Component, OnInit } from '@angular/core';
+import { DataService} from 'data.service';
 
 @Component({
   selector: 'app-gifs',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GifsComponent implements OnInit {
 
-  constructor() { }
+  gifs:any[] = [];
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.dataService.getTrendingGIFs();
+    .subscribe((response:any))=>{
+
+    }
   }
 
 }

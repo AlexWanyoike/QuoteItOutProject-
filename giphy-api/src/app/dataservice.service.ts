@@ -9,4 +9,9 @@ import { HttpClient } from '@angular/common/http';
 export class DataserviceService {
 
   constructor(private http:HttpClient) { }
+
+getTrendingGIFs(){
+  return this.http.get(``);
+}
+
 }
