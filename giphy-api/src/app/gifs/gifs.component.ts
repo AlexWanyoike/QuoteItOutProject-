@@ -1,7 +1,9 @@
-import { DataService } from 'data.service';
+
+import { DataService } from '../dataservice.service';
+
+
 
 import { Component, OnDestroy, OnInit } from '@angular/core';
-
 import { Subscription } from 'rxjs';
 import { environment } from './../../environments/environment';
 
