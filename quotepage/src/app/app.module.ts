@@ -8,6 +8,7 @@ import { QuoteformComponent } from './quoteform/quoteform.component';
 import { QuotedetailsComponent } from './quotedetails/quotedetails.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { StrikethroughDirective } from './strikethrough.directive';
+import { DatecalcPipe } from './datecalc.pipe';
 
 
 
@@ -19,6 +20,7 @@ import { StrikethroughDirective } from './strikethrough.directive';
     QuotedetailsComponent,
     NavbarComponent,
     StrikethroughDirective,
+    DatecalcPipe,
     
   ],
   imports: [
