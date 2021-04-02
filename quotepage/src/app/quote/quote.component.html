@@ -7,24 +7,16 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="container">
-                            <div>
-                                <hr>
-                                <ul>
-                                    <li>
-                                        <div *ngFor='let quote of quotes;let i = index'>
-                                            <li appStrikethrough>{{quote.name}} due on {{quote.subdate|date:'short'}}</li> 
-                                            <li >{{quote.quotename}}</li>
-                                            <li> {{quote.quoteauthor}}</li>
-                                            <li>{{quote.subdate}}</li>
-                                            <button (click)='toggleDetails(i)'>Show More</button>
-                                            <app-quotedetails *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deletequote($event,i)'> </app-quotedetails> 
-                                        </div>
-                                    </li>
-                                    
-                               
-                                </ul>
-                                <p *ngIf='quotes.length > 5'>You have too many goals</p>
-                            </div>
+                            <ul>
+                                <li *ngFor='let quote of quotes;let i = index'>
+                                    <p class="task">"{{quote.quote}}"</p>
+                                    <p class="task1">~{{quote.quoteauthor}}</p>
+                                    <p appStrikethrough class="task2"> Created by: {{quote.name}}</p>
+                                    <button  class="task3" (click)='toggleDetails(i)'>Show More</button>
+                                    <app-quotedetails *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deletequote($event,i)'> </app-quotedetails>
+                                </li>
+                                
+                            </ul>
                         </div>
 
                     </div>
@@ -78,7 +70,7 @@
     <ul>
         <div *ngFor='let quote of quotes;let i = index'>
             <li appStrikethrough>{{quote.name}} due on {{quote.subdate|date:'short'}}</li> 
-            <li >{{quote.quotename}}</li>
+            <li >{{quote.quote}}</li>
             <li> {{quote.quoteauthor}}</li>
             <li>{{quote.subdate}}</li>
             <button (click)='toggleDetails(i)'>Show More</button>
@@ -90,7 +82,13 @@
 </div>
 <!---->
 <div>
-    
+    <li *ngFor='let quote of quotes;let i = index'>
+        <p appStrikethrough>{{quote.name}} due on {{quote.subdate|date:'short'}}</p>
+        <p>{{quote.quote}}</p>
+        <p>{{quote.quoteauthor}}</p>
+        <button (click)='toggleDetails(i)'>Show More</button>
+        <app-quotedetails *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deletequote($event,i)'> </app-quotedetails>
+    </li>
 </div>
 
 
