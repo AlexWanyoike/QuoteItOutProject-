@@ -16,9 +16,11 @@ import { Component, OnInit } from '@angular/core';
 export class QuoteComponent implements OnInit {
   
 
-  myimage:string = 'assets/images'
-
-
+  myimage:string = 'assets/images/Cables New Used GoDaddy Store Image (1).png'
+  myimage1:string = 'assets/images/Cables New Used GoDaddy Store Image.png'
+  myimage2:string = 'assets/images/Grey Circles Gaming YouTube Channel Art (1).png'
+  myimage3:string = 'assets/images/Grey Circles Gaming YouTube Channel Art.png'
+  myimage4:string = 'assets/images/QUOTE IT.png'
   
   
 

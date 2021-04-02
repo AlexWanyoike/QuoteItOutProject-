@@ -1,4 +1,70 @@
 <div>
+    <div>
+        <img [src]="myimage3" alt="">
+        <div class="carousel-item active">
+            <app-navbar></app-navbar>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="container">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>s
+                            </ul>
+                        </div>
+
+                    </div>
+
+ <!---->                   
+                    <div class="col-4">
+                        <form   class="form1" id="form1">
+                            <label for="" class="form2">Quote Creator</label>
+                            <div class="">
+                        
+                                <label for="">Your Name:</label>
+                                <input type="text"  required minlength="3" class="form-text" id="name"  name="name" placeholder="Your Name " >
+                                
+                        
+                                <label for="">Quote:</label>
+                                <input type="text" placeholder="Quote" class="form-text" quote="head"  name='head'>
+                                <br><br>
+                        
+                                <label for="">Authors Name:</label>
+                                <input type="text" placeholder="Authors Name" class="form-text" author="flower" name="flower">
+                                <br><br>
+                        
+                                <button  class="btn btn-primary" type="submit">Submit</button>           
+                            </div>  
+                          </form>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+       
+              
+        
+        
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div>
     <hr>
     <ul>
         <div *ngFor='let quote of quotes;let i = index'>
@@ -15,25 +81,6 @@
 </div>
 <!---->
 <div>
-    <form   class="form1" id="form1">
-        <label for="" class="form2">Quote Creator</label>
-        <div class="">
-    
-            <label for="">Your Name:</label>
-            <input type="text"  required minlength="3" class="form-text" id="name"  name="name" placeholder="Your Name " >
-            
-    
-            <label for="">Quote:</label>
-            <input type="text" placeholder="Quote" class="form-text" quote="head"  name='head'>
-            <br><br>
-    
-            <label for="">Authors Name:</label>
-            <input type="text" placeholder="Authors Name" class="form-text" author="flower" name="flower">
-            <br><br>
-    
-            <button  class="btn btn-primary" type="submit">Submit</button>           
-        </div>  
-      </form>
     
 </div>
 
