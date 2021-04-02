@@ -1,8 +1,9 @@
-<div>Date Created: </div>
-<div>Is complete and Delete button</div>
+<div class="task1">Date Created: </div>
 <p>
-    <button type="button" class="task5">Upvote</button>
-    <button type="button" class="task6">Downvote</button>
+    <span class="task"> Rating: {{numberofLikes}}</span>
+    <button (click)= "likeButtonClick()" type="button" class="task5">Upvote</button>
+    <span class="task">{{numberofDislikes}}</span>
+    <button (click)= "dislikeButtonClick()" type="button" class="task6">Downvote</button>
 </p>
 
 

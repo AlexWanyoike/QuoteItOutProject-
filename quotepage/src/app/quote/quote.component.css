@@ -105,6 +105,7 @@ form button{
     text-align: center;
     font-size: 16px;
     margin-top: -12px;
+    color: black;
 }
 .task2{
     align-items: center;
@@ -128,8 +129,9 @@ form button{
     font-family: 'Playfair Display', serif;
     font-size: 15px;
     align-items: center;
-
-}.task4{
+    color: black;
+}
+.task4{
     text-align: center;
     font-family: 'Playfair Display', serif;
     width: 90px;
@@ -144,4 +146,5 @@ form button{
     font-family: 'Playfair Display', serif;
     font-size: 15px;
     align-items: center;
+    color: black;
 }

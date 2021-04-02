@@ -20,7 +20,15 @@ export class QuotedetailsComponent implements OnInit {
   @Input() quote: Quoteclass| undefined;
   @Output() isComplete = new EventEmitter<boolean>();
 
-  
+  numberofLikes: number =0;
+  numberofDislikes: number =0;
+
+  likeButtonClick(){
+    this.numberofLikes++;
+  };
+  dislikeButtonClick(){
+    this.numberofDislikes++;
+  }
   
   
   
