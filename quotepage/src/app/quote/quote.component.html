@@ -7,14 +7,24 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="container">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>s
-                            </ul>
+                            <div>
+                                <hr>
+                                <ul>
+                                    <li>
+                                        <div *ngFor='let quote of quotes;let i = index'>
+                                            <li appStrikethrough>{{quote.name}} due on {{quote.subdate|date:'short'}}</li> 
+                                            <li >{{quote.quotename}}</li>
+                                            <li> {{quote.quoteauthor}}</li>
+                                            <li>{{quote.subdate}}</li>
+                                            <button (click)='toggleDetails(i)'>Show More</button>
+                                            <app-quotedetails *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deletequote($event,i)'> </app-quotedetails> 
+                                        </div>
+                                    </li>
+                                    
+                               
+                                </ul>
+                                <p *ngIf='quotes.length > 5'>You have too many goals</p>
+                            </div>
                         </div>
 
                     </div>
@@ -31,13 +41,12 @@
                         
                                 <label for="">Quote:</label>
                                 <input type="text" placeholder="Quote" class="form-text" quote="head"  name='head'>
-                                <br><br>
                         
                                 <label for="">Authors Name:</label>
                                 <input type="text" placeholder="Authors Name" class="form-text" author="flower" name="flower">
-                                <br><br>
+                                <br>
                         
-                                <button  class="btn btn-primary" type="submit">Submit</button>           
+                                <button  class="btn btn-primary" type="submit">Create</button>           
                             </div>  
                           </form>
                         
