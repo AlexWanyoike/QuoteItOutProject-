@@ -45,7 +45,7 @@ export class QuoteComponent implements OnInit {
     this.deleteQuote.emit(complete);
   }
 
-  quoteDelete(isComplete:any, index:any){
+  quoteDelete(index:any){
    
      
    this.quotes.splice(index,1)
