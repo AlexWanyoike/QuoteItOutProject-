@@ -4,7 +4,7 @@ import { DatecalcPipe } from './../datecalc.pipe';
 import { QuotedetailsComponent } from './../quotedetails/quotedetails.component';
 
 import { Quoteclass } from './../quoteclass';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output , EventEmitter} from '@angular/core';
 
 
 @Component({
@@ -49,15 +49,15 @@ export class QuoteComponent implements OnInit {
   }
  ///////
   
-  quote = new Quoteclass("","","",new Date());
-
-  onCreate(quote:any){
-    this.quotes.push(quote);
+  inputquote(quote:Quoteclass){
+   let quotelink= this.quotes.length;
     
-    this.quote = new Quoteclass("","","",new Date());
-    this.add.emit(this.quote);
-    
+    this.quotes.push(quote)
   }
+   
+
+  
+  
   
 
 

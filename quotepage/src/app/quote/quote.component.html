@@ -9,10 +9,14 @@
                         <div class="container">
                             <ul>
                                 <li *ngFor='let quote of quotes;let i = index'>
-                                    <p class="task">"{{quote.quote}}"</p>
+                                    <p class="task">"{{quote.quoteit}}"</p>
                                     <p class="task1">~{{quote.quoteauthor}}</p>
                                     <p appStrikethrough class="task2"> Created by: {{quote.name}}</p>
+                                    <p>
                                     <button  class="task3" (click)='toggleDetails(i)'>Show More</button>
+                                    <button class="task4">Delete</button>
+                                    </p>
+                                    
                                     <app-quotedetails *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deletequote($event,i)'> </app-quotedetails>
                                 </li>
                                 
@@ -23,24 +27,7 @@
 
  <!---->                   
                     <div class="col-4">
-                        <form   class="form1" id="form1">
-                            <label for="" class="form2">Quote Creator</label>
-                            <div class="">
-                        
-                                <label for="">Your Name:</label>
-                                <input type="text"  required minlength="3" class="form-text" id="name"  name="name" placeholder="Your Name " >
-                                
-                        
-                                <label for="">Quote:</label>
-                                <input type="text" placeholder="Quote" class="form-text" quote="head"  name='head'>
-                        
-                                <label for="">Authors Name:</label>
-                                <input type="text" placeholder="Authors Name" class="form-text" author="flower" name="flower">
-                                <br>
-                        
-                                <button  class="btn btn-primary" type="submit">Create</button>           
-                            </div>  
-                          </form>
+                        <app-quoteform></app-quoteform>
                         
                     </div>
                 </div>
@@ -70,7 +57,7 @@
     <ul>
         <div *ngFor='let quote of quotes;let i = index'>
             <li appStrikethrough>{{quote.name}} due on {{quote.subdate|date:'short'}}</li> 
-            <li >{{quote.quote}}</li>
+            <li >{{quote.quoteit}}</li>
             <li> {{quote.quoteauthor}}</li>
             <li>{{quote.subdate}}</li>
             <button (click)='toggleDetails(i)'>Show More</button>
@@ -84,7 +71,7 @@
 <div>
     <li *ngFor='let quote of quotes;let i = index'>
         <p appStrikethrough>{{quote.name}} due on {{quote.subdate|date:'short'}}</p>
-        <p>{{quote.quote}}</p>
+        <p>{{quote.quoteit}}</p>
         <p>{{quote.quoteauthor}}</p>
         <button (click)='toggleDetails(i)'>Show More</button>
         <app-quotedetails *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deletequote($event,i)'> </app-quotedetails>

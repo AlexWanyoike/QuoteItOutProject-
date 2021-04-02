@@ -1,26 +1,24 @@
-<form>
-    <fieldset disabled>
-      <legend>Create Quote</legend>
-     
-      <div class="mb-3">
-        <label for="disabledTextInput" class="form-label">Your Name</label>
-        <input type="text" id="disabledTextInput" class="form-control" placeholder="Your Name">
-      </div>
-      <div class="mb-3">
-        <label for="disabledTextInput" class="form-label">Quote</label>
-        <input type="text" id="disabledTextInput" class="form-control" placeholder="Input Quote">
-      </div>
-      <div class="mb-3">
-        <label for="disabledTextInput" class="form-label">QuoteAuthor</label>
-        <input type="text" id="disabledTextInput" class="form-control" placeholder="Quote Author">
-      </div>
+<form   class="form1" id="form1" (ngSubmit)="addQuoteclass()" >
+  <label for="" class="form2">Quote Creator</label>
+  <div class="">
+
+      <label for="">Your Name:</label>
+      <input type="text"  required minlength="3" class="form-text" id="name"  name="name" placeholder="Your Name "#name ='ngModel' [(ngModel)]="inputquote.name">
       
 
-<!---->
+      <label for="">Quote:</label>
+      <input type="text" placeholder="Quote" class="form-text" quote="head"  name='quote'#quote='ngModel' [(ngModel)]="inputquote.quoteit">
 
-
-
+      <label for="">Authors Name:</label>
+      <input type="text" placeholder="Authors Name" class="form-text" author="flower" name="flower" #name="quoteauthor" [(ngMOdel)]='inputquote.quoteauthor'>
       
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </fieldset>
-  </form>
+      <label for="">Creation Date:</label>
+      <br>
+      <input type="date" id="Date-Picker">
+      
+      <br>
+      <pre></pre>
+
+      <button  class="btn btn-primary" type="submit">Create</button>           
+  </div>  
+</form>
