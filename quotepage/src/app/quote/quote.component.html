@@ -14,7 +14,7 @@
                                     <p appStrikethrough class="task2"> Created by: {{quote.name}}</p>
                                     <p>
                                     <button  class="task3">Show More</button>
-                                    <button class="task4" >Delete</button>
+                                    <button class="task4" (click)="quoteDelete">Delete</button>
                                     </p>
                                     
                                     <app-quotedetails *ngIf='quote.showDescription' [quote]='quote' > </app-quotedetails>
@@ -27,7 +27,7 @@
 
  <!---->                   
                     <div class="col-4">
-                        <app-quoteform></app-quoteform>
+                        <app-quoteform (newQuoteclass)="inputquote($event)"></app-quoteform>
                         
                     </div>
                 </div>
@@ -50,35 +50,4 @@
 
 
 
-
-
-<div>
-    <hr>
-    <ul>
-        <div *ngFor='let quote of quotes;let i = index'>
-            <li appStrikethrough>{{quote.name}} due on {{quote.subdate|date:'short'}}</li> 
-            <li >{{quote.quoteit}}</li>
-            <li> {{quote.quoteauthor}}</li>
-            <li>{{quote.subdate}}</li>
-            <button (click)='toggleDetails(i)'>Show More</button>
-            <app-quotedetails *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deletequote($event,i)'> </app-quotedetails> 
-        </div>
-   
-    </ul>
-    <p *ngIf='quotes.length > 5'>You have too many goals</p>
-</div>
-<!---->
-<div>
-    <li *ngFor='let quote of quotes;let i = index'>
-        <p appStrikethrough>{{quote.name}} due on {{quote.subdate|date:'short'}}</p>
-        <p>{{quote.quoteit}}</p>
-        <p>{{quote.quoteauthor}}</p>
-        <button (click)='toggleDetails(i)'>Show More</button>
-        <app-quotedetails *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deletequote($event,i)'> </app-quotedetails>
-    </li>
-</div>
-
-
-
-  
 

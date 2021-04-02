@@ -9,7 +9,7 @@ import { QuoteformComponent } from './quoteform/quoteform.component';
 import { QuotedetailsComponent } from './quotedetails/quotedetails.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { StrikethroughDirective } from './strikethrough.directive';
-
+import { FormsModule} from '@angular/forms'
 
 
 
@@ -26,7 +26,8 @@ import { StrikethroughDirective } from './strikethrough.directive';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

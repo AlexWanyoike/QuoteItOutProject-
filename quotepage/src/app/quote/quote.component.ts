@@ -39,23 +39,23 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }  
 ///
+  @Output() deleteQuote = new EventEmitter<boolean>();
 
-
+  deletedquoteclass(complete:boolean){
+    this.deleteQuote.emit(complete);
+  }
 
   quoteDelete(isComplete:any, index:any){
-    if (isComplete) {
-      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
-
-      if (toDelete){
-        this.quotes.splice(index,1)
-      }
-    }
+   
+     
+   this.quotes.splice(index,1)
+      
+    
   }
  ///////
   
   inputquote(quote:Quoteclass){
    let quotelink= this.quotes.length;
-    
     this.quotes.push(quote)
   }
    
