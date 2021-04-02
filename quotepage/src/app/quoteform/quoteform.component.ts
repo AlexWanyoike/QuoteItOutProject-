@@ -18,8 +18,15 @@ export class QuoteformComponent implements OnInit {
     this.inputquote = new Quoteclass("","","",new Date());
   }
 
-  //
-  
+  //[(ngModel)]="inputquote.name"
+  //[(ngModel)]="inputquote.quoteit"
+  //[(ngMOdel)]='inputquote.quoteauthor'
+  //#quote='ngModel'
+  //#name ='ngModel'
+  //#name="quoteauthor"
+  //(click)='toggleDetails(i)
+  //(click)= 'quoteDelete(true)'(isComplete) = 'deleteQuoteclass($event,i)
+  //(isComplete) = 'deletequote($event,i)
    
 
   constructor() { }
