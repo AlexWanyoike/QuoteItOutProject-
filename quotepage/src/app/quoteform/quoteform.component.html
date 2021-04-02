@@ -3,14 +3,14 @@
   <div class="">
 
       <label for="">Your Name:</label>
-      <input type="text"  required minlength="3" class="form-text" id="name"  name="name" placeholder="Your Name " #name ='ngModel'[(ngModel)]="inputquote.name">
+      <input required type="text"  required minlength="3" class="form-text" id="name"  name="name" placeholder="Your Name " #name ='ngModel'[(ngModel)]="inputquote.name" >
       
 
       <label for="">Quote:</label>
-      <input type="text" placeholder="Quote" class="form-text" quote="head"  name='quoteit' #quoteit='ngModel'[(ngModel)]="inputquote.quoteit">
+      <input required type="text" placeholder="Quote" class="form-text" quote="head"  name='quoteit' #quoteit='ngModel'[(ngModel)]="inputquote.quoteit" >
 
       <label for="">Authors Name:</label>
-      <input type="text" placeholder="Authors Name" class="form-text" author="flower" name="flower" [(ngModel)]='inputquote.quoteauthor' #flower="ngModel" >
+      <input required type="text" placeholder="Authors Name" class="form-text" author="flower" name="flower" [(ngModel)]='inputquote.quoteauthor' #flower="ngModel" >
       
       <label for="">Creation Date:</label>
       <br>
@@ -19,6 +19,6 @@
       <br>
       <pre></pre>
 
-      <button  class="btn btn-primary" type="submit">Create</button>           
+      <button  class="btn btn-primary" type="submit" required>Create</button>           
   </div>  
 </form>
