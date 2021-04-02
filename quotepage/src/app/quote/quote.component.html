@@ -1,16 +1,43 @@
 <div>
-    
     <hr>
     <ul>
         <div *ngFor='let quote of quotes;let i = index'>
-            <li appStrikethrough>{{quote.name}} due on {{quote.subdate|dateCount}}</li> 
+            <li appStrikethrough>{{quote.name}} due on {{quote.subdate|date:'short'}}</li> 
             <li >{{quote.quotename}}</li>
             <li> {{quote.quoteauthor}}</li>
+            <li>{{quote.subdate}}</li>
             <button (click)='toggleDetails(i)'>Show More</button>
-            <app-quotedetails *ngIf='quote.showDescription' [quote]='quote'> </app-quotedetails> 
+            <app-quotedetails *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deletequote($event,i)'> </app-quotedetails> 
         </div>
-        
+   
     </ul>
     <p *ngIf='quotes.length > 5'>You have too many goals</p>
-  </div>
+</div>
+<!---->
+<div>
+    <form   class="form1" id="form1">
+        <label for="" class="form2">Quote Creator</label>
+        <div class="">
+    
+            <label for="">Your Name:</label>
+            <input type="text"  required minlength="3" class="form-text" id="name"  name="name" placeholder="Your Name " >
+            
+    
+            <label for="">Quote:</label>
+            <input type="text" placeholder="Quote" class="form-text" quote="head"  name='head'>
+            <br><br>
+    
+            <label for="">Authors Name:</label>
+            <input type="text" placeholder="Authors Name" class="form-text" author="flower" name="flower">
+            <br><br>
+    
+            <button  class="btn btn-primary" type="submit">Submit</button>           
+        </div>  
+      </form>
+    
+</div>
+
+
+
+  
 

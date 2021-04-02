@@ -1,7 +1,8 @@
+import { Quote } from '@angular/compiler';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'dateCount'
+  name: 'dateCalc'
 })
 export class DatecalcPipe implements PipeTransform {
 
@@ -11,12 +12,28 @@ export class DatecalcPipe implements PipeTransform {
     var dateDifference = Math.abs(value - todayWithNoTime) //returns value in miliseconds
     const secondsInDay = 86400; //60 seconds * 60 minutes in an hour * 24 hours in a day
     var dateDifferenceSeconds = dateDifference*0.001; //converts miliseconds to seconds
-    var dateCounter = dateDifferenceSeconds/secondsInDay;
+    var dateCalc= dateDifferenceSeconds/secondsInDay;
 
-    if (dateCounter >= 1 && value > todayWithNoTime){
-      return dateCounter;
+    if (dateCalc >= 1 && value > todayWithNoTime){
+      return dateCalc;
     }else{
       return 0;
     }
   }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

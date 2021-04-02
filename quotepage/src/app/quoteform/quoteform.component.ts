@@ -1,4 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-quoteform',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quoteform.component.css']
 })
 export class QuoteformComponent implements OnInit {
+
+   
 
   constructor() { }
 
