@@ -12,6 +12,7 @@ import { GithubRepositoryComponent } from './github-repository/github-repository
 import { GithubAppComponent } from './github-app/github-app.component'
 import { HttpClientModule } from '@angular/common/http'
 import { GithubServiceService } from './github-service.service';
+import { GithubProfileDataComponent } from './github-profile-data/github-profile-data.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { GithubServiceService } from './github-service.service';
     GithubProfileCardComponent,
     GithubProfileComponent,
     GithubRepositoryComponent,
-    GithubAppComponent
+    GithubAppComponent,
+    GithubProfileDataComponent
   ],
   imports: [
     BrowserModule,
