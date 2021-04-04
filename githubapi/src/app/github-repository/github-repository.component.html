@@ -1,1 +1,14 @@
-<p>github-repository works!</p>
+<div class="card mt-3">
+    <div class="card-header bg-light text-white">
+        <h4>Github Repository</h4>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li *ngFor = "let repo of githubRepos"class="list-group-item d-flex justify-content-between">
+                <a href="http://" class="text-primary font-weight-bold" target="_blank"></a>
+                <span class="badge badge-success"> Stars</span>
+                <span class="badge bagde-warning">Stars</span>
+            </li>
+        </ul>
+    </div>
+</div>
