@@ -10,6 +10,8 @@ import { GithubProfileCardComponent } from './github-profile-card/github-profile
 import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { GithubRepositoryComponent } from './github-repository/github-repository.component';
 import { GithubAppComponent } from './github-app/github-app.component'
+import { HttpClientModule } from '@angular/common/http'
+import { GithubServiceService } from './github-service.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { GithubAppComponent } from './github-app/github-app.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GithubServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
