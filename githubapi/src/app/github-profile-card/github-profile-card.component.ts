@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GithubProfileCardComponent implements OnInit {
 
   @Input() githubProfile:any;
+  
 
   constructor() { }
 
