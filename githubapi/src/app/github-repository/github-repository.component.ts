@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GithubRepositoryComponent implements OnInit {
 
-  
+  @Input() githubRepos:any[] | undefined;
   constructor() { }
 
   ngOnInit(): void {
