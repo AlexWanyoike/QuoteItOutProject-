@@ -11,13 +11,9 @@
                         <input name="user" [(ngModel)]="githubUserQuery" type="text" class="form-control" placeholder="GitHub UserName" aria-label="GitHub UserName" aria-describedby="button-addon2">
                         <button class="btn btn-info" type="submit" id="button-addon2" value="search">Button</button>
                       </div>
-                </form>
-                    
+                </form>   
                 </div>
-                
-
             </div>
-
         </div>
     </div>
     <div class="row">
@@ -27,8 +23,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <app-github-repository [githubRepos]="githubRepos"></app-github-repository>
+            <app-github-repository ></app-github-repository>
         </div>
-
     </div>
 </div>

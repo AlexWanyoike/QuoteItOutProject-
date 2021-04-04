@@ -9,8 +9,7 @@ import { Component, Input, OnInit, Output } from '@angular/core';
 export class GithubProfileComponent implements OnInit {
 
   @Input() githubProfile:any;
- 
-  
+
   constructor() { }
 
   ngOnInit(): void {
