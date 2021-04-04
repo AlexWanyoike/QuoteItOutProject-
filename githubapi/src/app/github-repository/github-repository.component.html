@@ -2,6 +2,10 @@
     <div class="card-header bg-dark text-light">
         <h4>Github Repository</h4>
     </div>
+    <div>
+        <input type="text" #myInput [(ngModel)]="reponame" (input)="Search()">
+        
+    </div>
     <div class="card-body">
         <ul class="list-group">
             <li *ngFor = "let repo of githubRepos"class="list-group-item  d-flex justify-content-between">
