@@ -1,18 +1,24 @@
 <div class="card mt-3">
-    <div class="card-header bg-dark text-light">
-        <h4>Github Repository</h4>
+    <div class="card-header">
+        <div class="form1 text-light">
+            <h4>GITHUB REPOSITORY</h4>
+        </div>
     </div>
-    <div>
-        <input type="text" #myInput [(ngModel)]="reponame" (input)="Search()">
-        
+    <div class="form-inline ">
+        <div class="card-body">
+            <input name="user"  type="text" class="form-control" placeholder="Search GitHub Repository" aria-label="Search GitHub Repository" >
+        </div>
     </div>
     <div class="card-body">
-        <ul class="list-group">
-            <li *ngFor = "let repo of githubRepos"class="list-group-item  d-flex justify-content-between">
-                <a [href]="repo.html_url" class="text-primary font-weight-bold" target="_blank">{{repo.name}}</a>
-                <span class="badge badge-success">{{repo.stargazers_count}}</span>
-                <span class="badge bagde-warning">{{repo.watchers_count}}</span>
-            </li>
-        </ul>
+        <div class="form-text">
+            <ul class="list-group">
+                <li *ngFor = "let repo of githubRepos"class="list-group-item  d-flex justify-content-between">
+                    <a [href]="repo.html_url" class="text-primary font-weight-bold" target="_blank">{{repo.name}}</a>
+                    <span class="badge badge-success">{{repo.stargazers_count}}</span>
+                    <span class="badge bagde-warning">{{repo.watchers_count}}</span>
+                </li>
+            </ul>
+        </div>
+       
     </div>
  </div>

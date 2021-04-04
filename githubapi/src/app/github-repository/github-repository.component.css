@@ -1,0 +1,24 @@
+.btn {
+    align-items: center;
+    margin: 20px;
+}
+.form1{
+    padding: 5px 5px;
+    margin: center;
+    
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+}
+.card{
+    background-color: #04204e !important;
+}
+.form-text{
+    position: center;
+    width: 100%;
+    padding: 5px;
+    font-size: 25px;
+    border: 2px solid #ccc7c7;
+    font-family: inherit;
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+}
